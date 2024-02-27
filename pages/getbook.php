@@ -9,35 +9,44 @@
                 <h3 class=" text-center ">ยืมหนังสือ</h3>
                 <div class=" d-flex justify-content-center my-3">
                     <table>
-                        <tr>
-                            <td>ผุ้ต้องการยืม : </td>
-                            <td> <input type="text"></td>
-                            <td><button class=" btn btn-success py-1">ตกลง</button></td>
-                        </tr>
-                        <tr>
-                            <td>รหัสหนังสือ : </td>
-                            <td> <input type="text"></td>
-                            <td><button class=" btn btn-success py-1">ตกลง</button></td>
-                        </tr>
+                        <?php include('./controllers/getbook_name.php') ?>
+                        <form method="post">
+                            <tr>
+                                <td>ผุ้ต้องการยืม : </td>
+                                <td> <input type="text" name="username"></td>
+                                <td><button class=" btn btn-success py-1" name="input_username">ตกลง</button></td>
+                            </tr>
+                        </form>
+                        <?php include('./controllers/getbook_book.php') ?>
+                        <form method="post">
+                            <tr>
+                                <td>รหัสหนังสือ : </td>
+                                <td> <input type="text" name="bookid"></td>
+                                <td><button class=" btn btn-success py-1" name="input_bookid">ตกลง</button></td>
+                            </tr>
+                        </form>
                     </table>
                 </div>
                 <table class=" table table-bordered">
                     <tr>
                         <td>ชื่อ-สกุลผู้ยืม :</td>
-                        <td class=" w-75"></td>
+                        <td class=" w-75"><?= empty($_SESSION['getbook_name']) ? '' : $_SESSION['getbook_name'] ?></td>
                     </tr>
                     <tr>
                         <td>รหัสหนังสือ :</td>
-                        <td></td>
+                        <td><?= empty($_SESSION['getbook_bookid']) ? '' : $_SESSION['getbook_bookid'] ?></td>
                     </tr>
                     <tr>
                         <td>ชื่อหนังสือ :</td>
-                        <td></td>
+                        <td><?= empty($_SESSION['getbook_bookname']) ? '' : $_SESSION['getbook_bookname'] ?></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="">
                             <div class=" d-flex justify-content-center gap-2 ">
-                                <button class=" btn btn-success py-1">ยืมหนังสือ</button>
+                                <?php include('./controllers/getbook.php') ?>
+                                <form method="post">
+                                    <button class=" btn btn-success py-1" name="getbook">ยืมหนังสือ</button>
+                                </form>
                                 <button class=" btn btn-danger py-1">ยกเลิก</button>
                             </div>
                         </td>

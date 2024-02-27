@@ -15,12 +15,13 @@ include('./controllers/con_db.php');
     <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
     <link rel="stylesheet" href="./public/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
-    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </head>
 
 <body >
     <?php
-
+    
     if (empty($_GET['page']) || !ctype_alnum(str_replace(['-', '_'], '', $_GET['page'])) || !file_exists("pages/{$_GET['page']}.php")) {
         die(header('Location: ?page=home'));
     }
@@ -33,6 +34,7 @@ include('./controllers/con_db.php');
     </script>
     <script src="./public/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="./public/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    
 
 </body>
 

@@ -4,7 +4,7 @@
             <div class=" card-body">
                 <div class=" d-flex justify-content-center gap-3">
                     <a class=" btn btn-success " href="?page=getbook">ยืมหนังสือ</a>
-                    <a class=" btn btn-warning text-decoration-underline" href="?page=dropbook"> </a>
+                    <a class=" btn btn-warning text-decoration-underline" href="?page=dropbook">คืนหนังสือ</a>
                 </div>
                 <h3 class=" text-center ">คืนหนังสือ</h3>
                 <div class=" d-flex justify-content-center my-3">
