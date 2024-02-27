@@ -3,7 +3,7 @@
 <?php
 ob_start();
 session_start();
-// include('./controllers/con_db.php');
+include('./controllers/con_db.php');
 ?>
 
 <head>
@@ -13,7 +13,7 @@ session_start();
     <title>TATC-Delivery </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
-    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
     <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 </head>
